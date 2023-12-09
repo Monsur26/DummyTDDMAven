@@ -1,8 +1,10 @@
 package Common;
 
+import DummyHTML.Homepage;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.LogStatus;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,6 +19,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
+import org.testng.TestNG;
 import org.testng.annotations.*;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
@@ -328,7 +331,7 @@ public class WebAPI {
         File source = ts.getScreenshotAs(OutputType.FILE);
 
         //store the screen shot path in path variable. Here we are storing the screenshots under screenshots folder
-        String path = "C:\\Users\\Monsu\\MavenDummy\\Screenshots" + screenshotName + df + ".png";
+        String path = "Screenshots\\" + screenshotName + df + ".png";
 
         //create another File object variable which points(refer) to the above stored path variable
         File destination = new File(path);

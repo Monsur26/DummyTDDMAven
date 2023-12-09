@@ -16,4 +16,9 @@ public class TestCases extends WebAPI {
         getInitElements();
         homepage.TestCase1();
     }
+    @Test
+    public void TestCase2(){
+        getInitElements();
+        homepage.TestCase2();
+    }
 }
